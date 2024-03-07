@@ -46,7 +46,7 @@ const tw = {
     },
     Commands: {
       new: "新建聊天",
-      newm: "從面具新建聊天",
+      newm: "從咒语新建聊天",
       next: "下一個聊天",
       prev: "上一個聊天",
       clear: "清除上下文",
@@ -61,7 +61,7 @@ const tw = {
         dark: "深色模式",
       },
       Prompt: "快捷指令",
-      Masks: "所有面具",
+      Masks: "所有咒语",
       Clear: "清除聊天",
       Settings: "對話設定",
       UploadImage: "上傳圖片",
@@ -94,8 +94,8 @@ const tw = {
       SubTitle: "可以導出 Markdown 文本或者 PNG 圖片",
     },
     IncludeContext: {
-      Title: "包含面具上下文",
-      SubTitle: "是否在消息中展示面具上下文",
+      Title: "包含咒语上下文",
+      SubTitle: "是否在消息中展示咒语上下文",
     },
     Steps: {
       Select: "選取",
@@ -220,18 +220,18 @@ const tw = {
 
       LocalState: "本地資料",
       Overview: (overview: any) => {
-        return `${overview.chat} 次對話，${overview.message} 條消息，${overview.prompt} 條提示詞，${overview.mask} 個面具`;
+        return `${overview.chat} 次對話，${overview.message} 條消息，${overview.prompt} 條提示詞，${overview.mask} 個咒语`;
       },
       ImportFailed: "導入失敗",
     },
     Mask: {
       Splash: {
-        Title: "面具啟動頁面",
-        SubTitle: "新增聊天時，呈現面具啟動頁面",
+        Title: "咒语啟動頁面",
+        SubTitle: "新增聊天時，呈現咒语啟動頁面",
       },
       Builtin: {
-        Title: "隱藏內置面具",
-        SubTitle: "在所有面具列表中隱藏內置面具",
+        Title: "隱藏內置咒语",
+        SubTitle: "在所有咒语列表中隱藏內置咒语",
       },
     },
     Prompt: {
@@ -390,11 +390,11 @@ const tw = {
   Plugin: { Name: "外掛" },
   FineTuned: { Sysmessage: "你是一個助手" },
   Mask: {
-    Name: "面具",
+    Name: "咒语",
     Page: {
-      Title: "預設角色面具",
+      Title: "預設角色咒语",
       SubTitle: (count: number) => `${count} 個預設角色定義`,
-      Search: "搜尋角色面具",
+      Search: "搜尋角色咒语",
       Create: "新增",
     },
     Item: {
@@ -407,7 +407,7 @@ const tw = {
     },
     EditModal: {
       Title: (readonly: boolean) =>
-        `編輯預設面具 ${readonly ? "（只讀）" : ""}`,
+        `編輯預設咒语 ${readonly ? "（只讀）" : ""}`,
       Download: "下載預設",
       Clone: "複製預設",
     },
@@ -424,8 +424,8 @@ const tw = {
         SubTitle: "隱藏後預設對話不會出現在聊天界面",
       },
       Share: {
-        Title: "分享此面具",
-        SubTitle: "生成此面具的直達鏈接",
+        Title: "分享此咒语",
+        SubTitle: "生成此咒语的直達鏈接",
         Action: "覆制鏈接",
       },
     },
@@ -435,8 +435,8 @@ const tw = {
     Skip: "跳過",
     NotShow: "不再呈現",
     ConfirmNoShow: "確認停用？停用後可以隨時在設定中重新啟用。",
-    Title: "挑選一個面具",
-    SubTitle: "現在開始，與面具背後的靈魂思維碰撞",
+    Title: "挑選一個咒语",
+    SubTitle: "現在開始，與咒语背後的靈魂思維碰撞",
     More: "搜尋更多",
   },
   URLCommand: {
@@ -467,8 +467,8 @@ const tw = {
 
 type DeepPartial<T> = T extends object
   ? {
-    [P in keyof T]?: DeepPartial<T[P]>;
-  }
+      [P in keyof T]?: DeepPartial<T[P]>;
+    }
   : T;
 
 export type LocaleType = typeof tw;
